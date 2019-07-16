@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập tên chòm sao:</p>
+<br>
+<input type="text" id="nhap" placeholder="nhập tên sao cần tìm" >
+<button type="button" onclick="Search()">Tìm kiếm</button><br>
+<span id="display"></span>
+<script>
+    function Search() {
+        let a = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let b = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let input = document.getElementById("nhap").value;
+        for (let i = 0; i < b.length; i++) {
+            if (b.indexOf(input) == -1) {
+                document.getElementById('display').innerHTML = "Không tìm thấy";
+            } else {
+                document.getElementById('display').innerHTML = (a[b.indexOf(input)]);
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
